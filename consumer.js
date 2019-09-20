@@ -29,7 +29,7 @@ class Kafka {
 
   recieveMessage(callback) {
     this.consumer.on('message', async (message) => {
-      callback(message);
+      callback(message, this.consumer);
     });
   }
 }
